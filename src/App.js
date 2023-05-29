@@ -1,14 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { ROUTER } from "./router/router";
+import { ROUTER } from "./Paths/paths";
 import HomePage from "./pages/HomePage";
 
 function App() {
-  return (
-    <Routes>
-      <Route path={ROUTER.HOME_ROUTE} element={<HomePage />}></Route>
-    </Routes>
-  );
+  return <div>5</div>;
 }
 
 export default App;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CONFIG } from "../../config";
 import logo from "../../Images/Logos/Logo.svg";
 import "./Header.scss";
-import { HOMEPAGE } from "../../Paths/paths";
+import { HOMEPAGE } from "../../paths/paths";
 
 const Header = () => {
   return (

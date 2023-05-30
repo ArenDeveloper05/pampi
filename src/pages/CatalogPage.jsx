@@ -1,5 +1,7 @@
+import Layout from "../layout/Layout";
+
 const CatalogPage = () => {
-  return <div>Catalog</div>;
+  return <Layout>Catalog</Layout>;
 };
 
 export default CatalogPage;

@@ -1,5 +1,7 @@
+import Layout from "../layout/Layout";
+
 const GirlPage = () => {
-  return <div>Girl</div>;
+  return <Layout>Girl</Layout>;
 };
 
 export default GirlPage;

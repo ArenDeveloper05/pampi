@@ -1,7 +1,6 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import "./App.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Paths
@@ -13,7 +12,7 @@ import {
   HOMEPAGE,
   TODDLER_BOYPAGE,
   TODDLER_GIRLPAGE,
-} from "./Paths/paths";
+} from "./paths/paths";
 //Pages
 import HomePage from "./pages/HomePage";
 import CatalogPage from "./pages/CatalogPage";

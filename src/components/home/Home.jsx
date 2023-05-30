@@ -15,6 +15,11 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <section className="home-inner">
+        <div className="home-inner-newarrivals" id="new-arrivals">
+          <h3>New Arrivals</h3>
+        </div>
+      </section>
     </div>
   );
 };

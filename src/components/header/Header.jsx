@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CONFIG } from "../../config";
 import logo from "../../Images/Logo.svg";
 import "./Header.scss";
+import { HOMEPAGE } from "../../Paths/paths";
 
 const Header = () => {
   return (
@@ -9,7 +10,9 @@ const Header = () => {
       <div className="header--container">
         <div className="header--inner">
           <div className="header--inner--logo">
-            <img src={logo} />
+            <Link to={HOMEPAGE}>
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <div className="header--inner--links">
             {CONFIG.HEADER_CONFIG.map(({ id, title, year, route }) => {

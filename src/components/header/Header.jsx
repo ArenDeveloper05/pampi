@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CONFIG } from "../../config";
-import logo from "../../Images/Logos/Logo.svg";
+import logo from "../../Images/logos/Logo.svg";
+import basket from "../../Images/Icons/basket.svg";
 import "./Header.scss";
 import { HOMEPAGE } from "../../paths/paths";
 
@@ -29,6 +30,13 @@ const Header = () => {
                 </Link>
               );
             })}
+          </div>
+          <div className="header--inner--right">
+            <Link>
+              <button className="header--inner--right--login">Login</button>
+            </Link>
+            <img src={basket} alt="basket" />
+            <div>Eng</div>
           </div>
         </div>
       </div>

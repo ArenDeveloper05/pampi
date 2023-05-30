@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 * {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,4 +10,7 @@
 :root {
   --white: #ffffff;
   --main-bg: #eeeeee;
+  --black: #252525;
+  --button: #4f4024;
+  --white-2: #fcfcfc;
 }

@@ -3,13 +3,59 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+//Paths
+import {
+  BABYPAGE,
+  BOYPAGE,
+  CATALOGPAGE,
+  GIRLPAGE,
+  HOMEPAGE,
+  TODDLER_BOYPAGE,
+  TODDLER_GIRLPAGE,
+} from "./Paths/paths";
+//Pages
+import HomePage from "./pages/HomePage";
+import CatalogPage from "./pages/CatalogPage";
+import BabyPage from "./pages/BabyPage";
+import ToddlerGirlPage from "./pages/ToddlerGirlPage";
+import ToddlerBoyPage from "./pages/ToddlerBoyPage";
+import GirlPage from "./pages/GirlPage";
+import BoyPage from "./pages/BoyPage";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+const router = createBrowserRouter([
+  {
+    path: HOMEPAGE,
+    element: <HomePage />,
+  },
+  {
+    path: CATALOGPAGE,
+    element: <CatalogPage />,
+  },
+  {
+    path: BABYPAGE,
+    element: <BabyPage />,
+  },
+  {
+    path: TODDLER_GIRLPAGE,
+    element: <ToddlerGirlPage />,
+  },
+  {
+    path: TODDLER_BOYPAGE,
+    element: <ToddlerBoyPage />,
+  },
+  {
+    path: GIRLPAGE,
+    element: <GirlPage />,
+  },
+  {
+    path: BOYPAGE,
+    element: <BoyPage />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,34 @@
+.header {
+  &--container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &--inner {
+    max-width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    &--logo {
+      width: 81px;
+      height: auto;
+      cursor: pointer;
+    }
+    &--links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      &--link {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: #252525;
+        &--year {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

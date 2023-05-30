@@ -1,0 +1,38 @@
+.home {
+  padding: 60px;
+  &-img {
+    max-width: 1800px;
+    margin: auto;
+    position: relative;
+    > img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    &-content {
+      max-width: 782px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      > h1 {
+        font-weight: 600;
+        line-height: 48.76px;
+        color: var(--white-2);
+        font-size: 34px;
+        margin-bottom: 32px;
+      }
+      button {
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--button);
+        background-color: var(--white-2);
+      }
+    }
+  }
+}

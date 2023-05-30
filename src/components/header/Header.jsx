@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { CONFIG } from "../../config";
-import logo from "../../Images/Logo.svg";
+import logo from "../../Images/Logos/Logo.svg";
 import "./Header.scss";
 import { HOMEPAGE } from "../../Paths/paths";
 

@@ -13,7 +13,6 @@ const Header = () => {
             <Link to={HOMEPAGE}>
               <img src={logo} alt="logo" />
             </Link>
-            5
           </div>
           <div className="header--inner--links">
             {CONFIG.HEADER_CONFIG.map(({ id, title, year, route }) => {

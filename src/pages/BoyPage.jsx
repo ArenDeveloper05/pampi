@@ -1,5 +1,7 @@
+import Layout from "../layout/Layout";
+
 const BoyPage = () => {
-  return <div>Boy</div>;
+  return <Layout>Boy</Layout>;
 };
 
 export default BoyPage;

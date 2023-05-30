@@ -5,7 +5,7 @@ import {
   GIRLPAGE,
   TODDLER_BOYPAGE,
   TODDLER_GIRLPAGE,
-} from "./Paths/paths";
+} from "./paths/paths";
 
 export const CONFIG = {
   HEADER_CONFIG: [

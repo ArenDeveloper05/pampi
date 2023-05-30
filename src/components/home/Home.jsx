@@ -2,6 +2,7 @@ import "./Home.scss";
 import homeImg from "../../Images/header/home-img-1.jpg";
 import { Link } from "react-router-dom";
 import { CATALOGPAGE } from "../../paths/paths";
+import arrowDown from "../../Images/Icons/arrow-down.svg";
 
 const Home = () => {
   return (
@@ -13,6 +14,12 @@ const Home = () => {
           <Link to={CATALOGPAGE}>
             <button>Go to the Catalog</button>
           </Link>
+        </div>
+        <div className="home-img-more">
+          <a href="#new-arrivals">
+            <span>Explore More</span>
+            <img src={arrowDown} alt="explore-more" />
+          </a>
         </div>
       </div>
       <section className="home-inner">

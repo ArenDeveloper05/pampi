@@ -1,5 +1,5 @@
 .home {
-  padding: 60px;
+  padding: 150px 60px 60px 60px;
   &-img {
     max-width: 1800px;
     margin: auto;
@@ -38,7 +38,7 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      transform: translate(-50%, -12px);
+      transform: translate(-50%, -2px);
       > a {
         text-decoration: none;
         display: flex;

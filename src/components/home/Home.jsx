@@ -1,7 +1,14 @@
 import "./Home.scss";
-import homeImg from "../../Images/header/home-img-1.jpg";
+import homeImg from "../../Images/home/home-img-1.jpg";
 import { Link } from "react-router-dom";
-import { CATALOGPAGE } from "../../paths/paths";
+import {
+  BABYPAGE,
+  BOYPAGE,
+  CATALOGPAGE,
+  GIRLPAGE,
+  TODDLER_BOYPAGE,
+  TODDLER_GIRLPAGE,
+} from "../../paths/paths";
 import arrowDown from "../../Images/Icons/arrow-down.svg";
 import arrowRight from "../../Images/Icons/arrow-right.svg";
 import Card from "../Card/Card";
@@ -51,6 +58,27 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+        <div className="home-inner-parts">
+          <article className="home-inner-parts-1">
+            <div className="home-inner-parts-1-part babies">
+              <Link to={BABYPAGE}>Babies</Link>
+            </div>
+            <div className="home-inner-parts-1-part t-girls">
+              <Link to={TODDLER_GIRLPAGE}>Toddler girls</Link>
+            </div>
+            <div className="home-inner-parts-1-part t-boys">
+              <Link to={TODDLER_BOYPAGE}>Toddler boys</Link>
+            </div>
+          </article>
+          <article className="home-inner-parts-2">
+            <div className="home-inner-parts-2-part girls">
+              <Link to={GIRLPAGE}>Girls</Link>
+            </div>
+            <div className="home-inner-parts-2-part boys">
+              <Link to={BOYPAGE}>Boys</Link>
+            </div>
+          </article>
         </div>
       </section>
     </div>

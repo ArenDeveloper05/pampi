@@ -13,6 +13,7 @@ import arrowDown from "../../Images/Icons/arrow-down.svg";
 import arrowRight from "../../Images/Icons/arrow-right.svg";
 import Card from "../Card/Card";
 import { cartData } from "../../mock";
+import { mostPopularCardData } from "../../mock-2";
 
 const Home = () => {
   return (
@@ -79,6 +80,35 @@ const Home = () => {
               <Link to={BOYPAGE}>Boys</Link>
             </div>
           </article>
+        </div>
+
+        <div className="home-inner-mostPopular">
+          <div className="home-inner-mostPopular-head">
+            <h3 className="home-inner-mostPopular-head-title">
+              Most popular clothes of the season
+            </h3>
+            <div className="home-inner-mostPopular-head-rout">
+              <Link
+                to={CATALOGPAGE}
+                className="home-inner-mostPopular-head-text"
+              >
+                Go to the Catalog
+              </Link>
+              <img src={arrowRight} alt="go to catalog" />
+            </div>
+          </div>
+          <div className="home-inner-mostPopular-cards">
+            {mostPopularCardData.map((card) => {
+              return (
+                <Card
+                  key={card._id}
+                  price={card.price}
+                  name={card.name}
+                  ages={card.ages}
+                />
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>

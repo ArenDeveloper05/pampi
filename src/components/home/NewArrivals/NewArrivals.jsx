@@ -7,7 +7,7 @@ import { CATALOGPAGE } from "../../../paths/paths";
 
 export default function NewArrivals() {
   return (
-    <div className="newarrivals" id="new-arrivals">
+    <div className="newarrivals">
       <div className="newarrivals-head">
         <h3 className="newarrivals-head-title">New Arrivals</h3>
         <div className="newarrivals-head-rout">

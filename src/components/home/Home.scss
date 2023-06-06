@@ -37,7 +37,7 @@
     &-more {
       position: absolute;
       left: 50%;
-      bottom: 0;
+      bottom: 2.5%;
       transform: translate(-50%, -2px);
       > a {
         text-decoration: none;
@@ -47,6 +47,10 @@
         width: max-content;
         font-size: 12px;
         opacity: 0.4;
+        transition: opacity 0.2s linear;
+        &:hover {
+          opacity: 0.8;
+        }
         > span {
           font-weight: 400;
           line-height: 14.63px;

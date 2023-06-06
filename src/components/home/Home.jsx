@@ -19,6 +19,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="home-img-more">
+          <div id="new-arrivals"></div>
           <a href="#new-arrivals">
             <span>Explore More</span>
             <img src={arrowDown} alt="explore-more" />

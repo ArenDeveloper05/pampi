@@ -7,21 +7,13 @@ export default function Selection() {
   const [sizeOpenStatus, setSizeOpenStatus] = useState(false);
   const [materialOpenStatus, setMaterialOpenStatus] = useState(false);
 
-  const onClickGenderOpen = () => {
-    setGenderOpenStatus(!genderOpenStatus);
-  };
-
-  const onClickSizeOpen = () => {
-    setSizeOpenStatus(!sizeOpenStatus);
-  };
-
-  const onClickMaterialOpen = () => {
-    setMaterialOpenStatus(!materialOpenStatus);
-  };
   return (
     <div className="selection">
       <div className="selection-part1">
-        <div className="selection-headPart" onClick={onClickGenderOpen}>
+        <div
+          className="selection-headPart"
+          onClick={() => setGenderOpenStatus(!genderOpenStatus)}
+        >
           <p className="selection-headPart-title">Gender</p>
           <img
             src={arrowTwoTop}
@@ -42,7 +34,10 @@ export default function Selection() {
       </div>
 
       <div className="selection-part1">
-        <div className="selection-headPart" onClick={onClickSizeOpen}>
+        <div
+          className="selection-headPart"
+          onClick={() => setSizeOpenStatus(!sizeOpenStatus)}
+        >
           <p className="selection-headPart-title">Size</p>
           <img
             src={arrowTwoTop}
@@ -69,7 +64,10 @@ export default function Selection() {
       </div>
 
       <div className="selection-part1">
-        <div className="selection-headPart" onClick={onClickMaterialOpen}>
+        <div
+          className="selection-headPart"
+          onClick={() => setMaterialOpenStatus(!materialOpenStatus)}
+        >
           <p className="selection-headPart-title">Material</p>
           <img
             src={arrowTwoTop}

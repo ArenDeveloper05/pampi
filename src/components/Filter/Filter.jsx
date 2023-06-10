@@ -10,19 +10,15 @@ import Selection from "./Selection/Selection";
 export default function Filter({ name }) {
   const [filterOpenStatus, setFilterOpenStatus] = useState(false);
 
-  const onClickFilterOpen = (event) => {
-    setFilterOpenStatus(true);
-  };
-
-  const onClickFilterClose = () => {
-    setFilterOpenStatus(false);
-  };
   return (
     <>
       <div className="filter">
         <h3 className="filter-headtext">{name}</h3>
         <div className="filter-filterBlock">
-          <div onClick={onClickFilterOpen} className="filter-filtration">
+          <div
+            onClick={() => setFilterOpenStatus(true)}
+            className="filter-filtration"
+          >
             <img src={filterSilver} alt="filter" />
             <span className="filter-filtration-text">Filter</span>
           </div>
@@ -35,7 +31,7 @@ export default function Filter({ name }) {
                 height: "20px",
                 cursor: "pointer",
               }}
-              onClick={onClickFilterClose}
+              onClick={() => setFilterOpenStatus(false)}
             />
           )}
         </div>

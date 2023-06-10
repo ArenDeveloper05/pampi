@@ -16,4 +16,39 @@ export const CONFIG = {
     { id: 5, title: "Girl", year: "(8-14y)", route: GIRLPAGE },
     { id: 6, title: "Boy", year: "(8-14y)", route: BOYPAGE },
   ],
+  FILTER_CONFIG: [
+    { title: "Gender", types: ["All", "Boy", "Girl", "Unisex"] },
+    {
+      title: "Size",
+      types: [
+        "All",
+        "6-9M",
+        "9-12M",
+        "12-18M",
+        "18-24M",
+        "2-3Y",
+        "3-6Y",
+        "6-9Y",
+        "9-12Y",
+        "13+Y",
+      ],
+    },
+    {
+      title: "Material",
+      types: [
+        "All",
+        "Cotton",
+        "Acrylic",
+        "Canvas",
+        "Chiffon",
+        "Corduroy",
+        "Composite Fabric",
+      ],
+    },
+    {
+      title: "Price",
+      minRange: "5000",
+      maxRange: "100000",
+    },
+  ],
 };

@@ -1,0 +1,35 @@
+.mostPopular {
+  &-head {
+    margin: 60px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--button);
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+      color: var(--black);
+    }
+    &-text {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17px;
+      color: var(--button);
+      text-decoration: none;
+    }
+    &-rout {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+  }
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+  }
+}

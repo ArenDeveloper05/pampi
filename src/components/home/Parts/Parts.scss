@@ -1,0 +1,58 @@
+.parts {
+  margin-top: 56px;
+  > article {
+    display: flex;
+    gap: 20px;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      border-radius: 14px;
+      background-size: cover;
+      background-position: center;
+      a {
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--white-2);
+      }
+    }
+  }
+  &-1 {
+    &-part {
+      opacity: 0.8;
+      height: 300px;
+      transition: opacity 0.2s linear;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .babies {
+      background-image: url(../../../Images/home/babies.png);
+    }
+    .t-girls {
+      background-image: url(../../../Images/home/toddler-girls.png);
+    }
+    .t-boys {
+      background-image: url(../../../Images/home/toddler-boys.png);
+    }
+  }
+  &-2 {
+    margin-top: 20px;
+    &-part {
+      height: 440px;
+      opacity: 0.8;
+      transition: opacity 0.2s linear;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .girls {
+      background-image: url(../../../Images/home/girls.png);
+    }
+    .boys {
+      background-image: url(../../../Images/home/boys.png);
+    }
+  }
+}

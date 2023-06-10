@@ -1,4 +1,5 @@
 import "./Filter.scss";
+import cancel from "../../Images/Icons/cancel.svg";
 import filterBrown from "../../Images/Icons/filter-brown.svg";
 import filterSilver from "../../Images/Icons/filter-silver.svg";
 import { CardsData } from "../../mock-3";
@@ -9,16 +10,34 @@ import Selection from "./Selection/Selection";
 export default function Filter({ name }) {
   const [filterOpenStatus, setFilterOpenStatus] = useState(false);
 
-  const onClickFilter = () => {
-    setFilterOpenStatus(!filterOpenStatus);
+  const onClickFilterOpen = (event) => {
+    setFilterOpenStatus(true);
+  };
+
+  const onClickFilterClose = () => {
+    setFilterOpenStatus(false);
   };
   return (
     <>
       <div className="filter">
         <h3 className="filter-headtext">{name}</h3>
-        <div className="filter-filtration" onClick={onClickFilter}>
-          <img src={filterSilver} alt="filter" />
-          <span className="filter-filtration-text">Filter</span>
+        <div className="filter-filterBlock">
+          <div onClick={onClickFilterOpen} className="filter-filtration">
+            <img src={filterSilver} alt="filter" />
+            <span className="filter-filtration-text">Filter</span>
+          </div>
+          {filterOpenStatus && (
+            <img
+              src={cancel}
+              style={{
+                marginLeft: "5px",
+                width: "20px",
+                height: "20px",
+                cursor: "pointer",
+              }}
+              onClick={onClickFilterClose}
+            />
+          )}
         </div>
       </div>
 

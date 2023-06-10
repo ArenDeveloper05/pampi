@@ -11,6 +11,10 @@
     text-transform: capitalize;
     color: var(--black);
   }
+  &-filterBlock {
+    display: flex;
+    gap: 4px;
+  }
   &-filtration {
     width: 68px;
     display: flex;

@@ -10,6 +10,7 @@ export default function Selection() {
     material: null,
     price: null,
   });
+
   console.log(filterData);
 
   return (

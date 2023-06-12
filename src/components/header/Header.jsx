@@ -1,11 +1,37 @@
+import "./Header.scss";
 import { Link } from "react-router-dom";
 import { CONFIG } from "../../config";
 import logo from "../../Images/logos/Logo.svg";
 import basket from "../../Images/Icons/basket.svg";
-import "./Header.scss";
 import { HOMEPAGE } from "../../paths/paths";
+import { useState, useRef, useEffect } from "react";
+import Basket from "./Basket/Basket";
 
 const Header = () => {
+  const [basketOpen, setBasketOpen] = useState(false);
+
+  const iconRef = useRef(null);
+  const modalRef = useRef(null);
+
+  const handleClick = (e) => {
+    if (iconRef.current && iconRef.current.contains(e.target)) {
+      setBasketOpen((prev) => !prev);
+    } else {
+      if (modalRef.current && modalRef.current.contains(e.target)) {
+      } else {
+        setBasketOpen(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
+
   return (
     <header className="header">
       <div className="header--container">
@@ -35,7 +61,12 @@ const Header = () => {
             <Link>
               <button className="header--inner--right--login">Login</button>
             </Link>
-            <img src={basket} alt="basket" />
+            <div className="header--inner--right--basket">
+              <img src={basket} alt="basket" ref={iconRef} />
+              {basketOpen && (
+                <Basket setBasketOpen={setBasketOpen} ref={modalRef} />
+              )}
+            </div>
             <div>Eng</div>
           </div>
         </div>

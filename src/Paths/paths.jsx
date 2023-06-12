@@ -5,3 +5,4 @@ export const TODDLER_GIRLPAGE = "/toddlergirl";
 export const TODDLER_BOYPAGE = "/toddlerboy";
 export const GIRLPAGE = "/girl";
 export const BOYPAGE = "/boy";
+export const PRODUCTPAGE = (id) => `/product/#${id}`;

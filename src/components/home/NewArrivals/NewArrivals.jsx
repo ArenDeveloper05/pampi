@@ -3,7 +3,7 @@ import Card from "../../Card/Card";
 import arrowRight from "../../../Images/Icons/arrow-right.svg";
 import "./NewArrivals.scss";
 import { cartData } from "../../../mock";
-import { CATALOGPAGE } from "../../../paths/paths";
+import { CATALOGPAGE, PRODUCTPAGE } from "../../../paths/paths";
 
 export default function NewArrivals() {
   return (
@@ -20,12 +20,23 @@ export default function NewArrivals() {
       <div className="newarrivals-cards">
         {cartData.map((card) => {
           return (
-            <Card
+            <Link
+              to={PRODUCTPAGE(card._id)}
+              state={{
+                _price: card.price,
+                _name: card.name,
+                _ages: card.ages,
+              }}
               key={card._id}
-              price={card.price}
-              name={card.name}
-              ages={card.ages}
-            />
+              style={{ textDecoration: "none" }}
+            >
+              <Card
+                key={card._id}
+                price={card.price}
+                name={card.name}
+                ages={card.ages}
+              />
+            </Link>
           );
         })}
       </div>

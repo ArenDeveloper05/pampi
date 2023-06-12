@@ -7,7 +7,7 @@ export default function Card({ price, name, ages }) {
   return (
     <div className="card">
       <div className="card-img">
-        <img src={card_image} alt="card_image" />
+        <img src={card_image} alt="card_image" className="card-img-image" />
         <div className="card-price">{price} AMD</div>
       </div>
 

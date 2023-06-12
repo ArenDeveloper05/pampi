@@ -21,6 +21,7 @@ import ToddlerGirlPage from "./pages/ToddlerGirlPage";
 import ToddlerBoyPage from "./pages/ToddlerBoyPage";
 import GirlPage from "./pages/GirlPage";
 import BoyPage from "./pages/BoyPage";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: BOYPAGE,
     element: <BoyPage />,
+  },
+  {
+    path: "/product",
+    element: <ProductPage />,
   },
 ]);
 

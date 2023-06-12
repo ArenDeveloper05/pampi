@@ -1,5 +1,5 @@
 import "./MostPopular.scss";
-import { CATALOGPAGE } from "../../../paths/paths";
+import { CATALOGPAGE, PRODUCTPAGE } from "../../../paths/paths";
 import arrowRight from "../../../Images/Icons/arrow-right.svg";
 import { Link } from "react-router-dom";
 import { mostPopularCardData } from "../../../mock-2";
@@ -22,12 +22,23 @@ export default function MostPopular() {
       <div className="mostPopular-cards">
         {mostPopularCardData.map((card) => {
           return (
-            <Card
+            <Link
+              to={PRODUCTPAGE(card._id)}
+              state={{
+                _price: card.price,
+                _name: card.name,
+                _ages: card.ages,
+              }}
               key={card._id}
-              price={card.price}
-              name={card.name}
-              ages={card.ages}
-            />
+              style={{ textDecoration: "none" }}
+            >
+              <Card
+                key={card._id}
+                price={card.price}
+                name={card.name}
+                ages={card.ages}
+              />
+            </Link>
           );
         })}
       </div>

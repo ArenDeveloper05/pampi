@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import arrowTwoTop from "../../../../Images/Icons/arrow-2-top.svg";
+import RangeSlider from "../RangeSlider/RangeSlider";
 
 const SelectionPart = ({ config, setFilterData }) => {
   const [open, setOpen] = useState();
@@ -9,14 +10,21 @@ const SelectionPart = ({ config, setFilterData }) => {
     setOpen((prev) => !prev);
   }, []);
 
-  const selectFilterValues = (key, type) => {
-    setFilterData((prev) => {
-      return {
-        ...prev,
-        [key.toLowerCase()]: type,
-      };
-    });
-  };
+  const selectFilterValues = useCallback(
+    (key, type) => {
+      setFilterData((prev) => {
+        return {
+          ...prev,
+          [key.toLowerCase()]: type,
+        };
+      });
+    },
+    [setFilterData]
+  );
+
+  // const selectFilterValues = (key, type) => {
+
+  // };
 
   return (
     <div className="selection-part1">
@@ -39,7 +47,10 @@ const SelectionPart = ({ config, setFilterData }) => {
                   key={i}
                   className="selection-footPart-text"
                   style={{
-                    border: selectedType == i ? "solid" : "none",
+                    border:
+                      selectedType == i
+                        ? "2px solid #4F4024"
+                        : "2px solid #fff",
                   }}
                   onClick={() => {
                     setSelectedType(i);
@@ -51,14 +62,15 @@ const SelectionPart = ({ config, setFilterData }) => {
               );
             })
           ) : (
-            <div className="selection-footPart-text">
-              <input type="range" />
-              <div className="selection-footPart-text-prices">
-                {config.minRange}
-                {"  "}
-                {config.maxRange}
+            <>
+              <div className="selection-footPart-range">
+                <RangeSlider
+                  selectFilterValues={selectFilterValues}
+                  config={config}
+                  setFilterData={setFilterData}
+                />
               </div>
-            </div>
+            </>
           )}
         </div>
       )}

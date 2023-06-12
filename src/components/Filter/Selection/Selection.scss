@@ -63,8 +63,36 @@
       padding: 8px 16px;
       background-color: var(--white-2);
       border-radius: 12px;
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      border: 2px solid rgba(0, 0, 0, 0.04);
       cursor: pointer;
+    }
+    &-range {
+      width: 100%;
+      padding: 0 8px;
+      &-prices {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-price {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: var(--black);
+          width: 116.5px;
+          height: 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          padding: 12px;
+          border: 1px solid rgba(80, 80, 80, 0.3);
+          border-radius: 12px;
+          &-amd {
+            color: #505050;
+            opacity: 0.3;
+          }
+        }
+      }
     }
   }
 }

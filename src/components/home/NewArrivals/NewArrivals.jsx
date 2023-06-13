@@ -5,11 +5,11 @@ import "./NewArrivals.scss";
 import { cartData } from "../../../mock";
 import { CATALOGPAGE, PRODUCTPAGE } from "../../../paths/paths";
 
-export default function NewArrivals() {
+export default function NewArrivals({ title }) {
   return (
     <div className="newarrivals">
       <div className="newarrivals-head">
-        <h3 className="newarrivals-head-title">New Arrivals</h3>
+        <h3 className="newarrivals-head-title">{title}</h3>
         <div className="newarrivals-head-rout">
           <Link to={CATALOGPAGE} className="newarrivals-head-text">
             Go to the Catalog

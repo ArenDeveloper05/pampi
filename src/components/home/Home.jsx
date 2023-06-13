@@ -27,7 +27,7 @@ const Home = () => {
         </div>
       </div>
       <section className="home-inner">
-        <NewArrivals />
+        <NewArrivals title="New Arrivals" />
         <Parts />
         <MostPopular />
       </section>

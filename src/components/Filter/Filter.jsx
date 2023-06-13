@@ -1,11 +1,12 @@
 import "./Filter.scss";
 import cancel from "../../Images/Icons/cancel.svg";
-import filterBrown from "../../Images/Icons/filter-brown.svg";
 import filterSilver from "../../Images/Icons/filter-silver.svg";
 import { CardsData } from "../../mock-3";
 import Card from "../Card/Card";
 import { useState } from "react";
 import Selection from "./Selection/Selection";
+import { PRODUCTPAGE } from "../../paths/paths";
+import { Link } from "react-router-dom";
 
 export default function Filter({ name }) {
   const [filterOpenStatus, setFilterOpenStatus] = useState(false);
@@ -42,12 +43,23 @@ export default function Filter({ name }) {
         <div className="selectFilterBlock-cards">
           {CardsData.map((card) => {
             return (
-              <Card
+              <Link
+                to={PRODUCTPAGE(card._id)}
+                state={{
+                  _price: card.price,
+                  _name: card.name,
+                  _ages: card.ages,
+                }}
                 key={card._id}
-                price={card.price}
-                name={card.name}
-                ages={card.ages}
-              />
+                style={{ textDecoration: "none" }}
+              >
+                <Card
+                  key={card._id}
+                  price={card.price}
+                  name={card.name}
+                  ages={card.ages}
+                />
+              </Link>
             );
           })}
         </div>

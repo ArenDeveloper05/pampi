@@ -9,7 +9,7 @@ import { PRODUCTPAGE } from "../../paths/paths";
 import { Link } from "react-router-dom";
 
 export default function Filter({ name }) {
-  const [filterOpenStatus, setFilterOpenStatus] = useState(false);
+  const [filterOpenStatus, setFilterOpenStatus] = useState(true);
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function Filter({ name }) {
       </div>
 
       <div className="selectFilterBlock">
-        {filterOpenStatus && <Selection />}
+        <Selection open={filterOpenStatus} />
         <div className="selectFilterBlock-cards">
           {CardsData.map((card) => {
             return (

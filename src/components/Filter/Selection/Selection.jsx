@@ -3,7 +3,7 @@ import SelectionPart from "./Selection-part/SelectionPart";
 import { CONFIG } from "../../../config";
 import { useState } from "react";
 
-export default function Selection() {
+export default function Selection({ open }) {
   const [filterData, setFilterData] = useState({
     gender: null,
     size: null,
@@ -14,7 +14,7 @@ export default function Selection() {
   console.log(filterData);
 
   return (
-    <div className="selection">
+    <div className={open ? "selection" : "selection selection-hide"}>
       {CONFIG.FILTER_CONFIG.map((config, i) => {
         return (
           <SelectionPart

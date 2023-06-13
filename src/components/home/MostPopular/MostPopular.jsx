@@ -22,23 +22,12 @@ export default function MostPopular() {
       <div className="mostPopular-cards">
         {mostPopularCardData.map((card) => {
           return (
-            <Link
-              to={PRODUCTPAGE(card._id)}
-              state={{
-                _price: card.price,
-                _name: card.name,
-                _ages: card.ages,
-              }}
+            <Card
               key={card._id}
-              style={{ textDecoration: "none" }}
-            >
-              <Card
-                key={card._id}
-                price={card.price}
-                name={card.name}
-                ages={card.ages}
-              />
-            </Link>
+              price={card.price}
+              name={card.name}
+              ages={card.ages}
+            />
           );
         })}
       </div>

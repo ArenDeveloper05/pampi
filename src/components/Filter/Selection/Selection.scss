@@ -7,7 +7,7 @@
   margin-right: 20px;
   border-radius: 12px;
   animation-name: selection;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   @keyframes selection {
     0% {
@@ -92,6 +92,22 @@
           }
         }
       }
+    }
+  }
+}
+.selection-hide {
+  animation-name: selection-hide;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+
+  @keyframes selection-hide {
+    0% {
+      width: 1000px;
+      opacity: 1;
+    }
+    100% {
+      width: 0;
+      opacity: 0;
     }
   }
 }

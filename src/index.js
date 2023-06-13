@@ -21,7 +21,7 @@ import ToddlerGirlPage from "./pages/ToddlerGirlPage";
 import ToddlerBoyPage from "./pages/ToddlerBoyPage";
 import GirlPage from "./pages/GirlPage";
 import BoyPage from "./pages/BoyPage";
-import ProductPage from "./pages/ProductPage/ProductPage";
+import ProductPage from "./pages/ProductPage";
 
 const router = createBrowserRouter([
   {
